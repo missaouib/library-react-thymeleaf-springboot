@@ -53,6 +53,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/api/v1/publishers/**",
             "/api/v1/categories/**",
             "/api/v1/posts/**",
+            "/books/**",
+            "/authors/**",
+            "/categories/**",
+            "/publishers/**",
 
             // -- Swagger UI v3 (OpenAPI)
             "/v3/api-docs/**",
