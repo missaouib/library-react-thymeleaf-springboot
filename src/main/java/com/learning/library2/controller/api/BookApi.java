@@ -47,6 +47,7 @@ public class BookApi {
         return bookService.findBookById(id);
     }
 
+    /*
     @RequestMapping(value = "/image/{id}", method = RequestMethod.GET,
     produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<InputStreamResource> getImage(@PathVariable Long id) throws IOException {
@@ -55,6 +56,7 @@ public class BookApi {
         return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG)
                 .body(new InputStreamResource(imageFile.getInputStream()));
     }
+    */
 
     @GetMapping("/search")
     public List<Book> searchBook(@Param(value = "inputString") String inputString) {
