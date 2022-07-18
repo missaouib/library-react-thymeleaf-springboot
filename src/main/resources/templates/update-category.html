@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div th:insert="fragments/header :: header"></div>
+    <div class = "container my-2 main-body">
+        <h3 class = "text-center">Update Category</h3>
+        <div class = "login-main">
+            <div class = "card">
+                <div class = "card-body">
+                    <form th:action="@{/categories/{id}(id=${category.id})}" th:object="${category}" method="POST">
+                        <div class = "row">
+                            <div class = "form-group col-md-12">
+                                <label for = "name" class = "col-form-label">Category Name</label>
+                                <input type = "text" th:field="*{name}" class="form-control font-bold" name = "name" placeholder="Category name" required>
+                            </div>
+                            <div class = "mt-2 mb-2">
+                                <span th:if="${!success}" style="color:red;">Category name already exists.</span>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <input type="submit" class="btn btn-primary" value="Submit" style = "width: 100%;">
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</body>
+</html>
