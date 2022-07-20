@@ -9,4 +9,4 @@ In **Many to Many** Relationship
 - FetchType.LAZY: when we retrieve an parent entity, the child entity will not be returned with the the parent entity.
 - FetchType.EAGER: when we retrieve an parent entity, the child entity will be returned with the the parent entity.
 
-![ScreenShot](book-photos/entity.png)
+![Screenshot](book-photos/entity.png)
