@@ -46,7 +46,7 @@ public class SwaggerConfiguration {
     private ApiInfo apiEndpointsInfo() {
         return new ApiInfoBuilder().title("Spring Boot Rest API")
                 .description("Library REST API")
-                .contact(new Contact("Van Thuan", "https://github.com/VThuan5421", "khunglong5421@gmail.com"))
+                .contact(new Contact("Van Thuan", "https://github.com/vanthuan79", "thuan.jolly@gmail.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.0.0")
